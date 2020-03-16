@@ -193,7 +193,7 @@ int check_mvmc (int i, int j, int k, Array4<Real const> const& fine)
     int nz11 = num_cuts(fine(i+2,j+2,k),fine(i+2,j+2,k+1)) + num_cuts(fine(i+2,j+2,k+1),fine(i+2,j+2,k+2));
 
     // x-faces
-    int nxm;
+    int nxm=0; // fix uninitialized variable warning
     int n = ny00 + ny01 + nz00 + nz01;
     if (n == 0) {
         nxm = 0;
